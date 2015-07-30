@@ -26,10 +26,9 @@ $(document).ready(function() {
 		   		   	stoolHTML += '<li class="title"><h3>' + item.title + '</h3></li>';
 		   		   	stoolHTML += '<li class="price">Price: ' + item.price + '</li>';
 		   		   	stoolHTML += '<li class="link"><a href="' + item.link + '">Click for more info</a></li>';
-		   		   	stoolHTML += '<textarea class="form-control" rows="3" placeholder="Listing notes" class="notes"></textarea>'
+		   		   	stoolHTML += '<li class="notes"><textarea class="form-control" rows="3" placeholder="listing notes"></textarea>'
 		   		   	stoolHTML += '<li><button type="button" class="btn btn-primary text-uppercase save"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>   Save</button><button type="button" class="btn btn-danger text-uppercase delete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>   Delete</button></li>'
 		   			stoolHTML += '</ul>';
-		   			// stoolHTML += '<span class="glyphicon glyphicon-search pull-right hidden-md" aria-hidden="true"></span>';
 		   			stoolHTML += '</div>';
 		   		});
 	   		$('#message').html(stoolHTML);
@@ -42,10 +41,10 @@ $(document).ready(function() {
 			list.title 	= $('.title', this).text();
 			list.price 	= $('.price', this).text();
 			list.link 	= $('.link a', this).attr('href');
+			list.notes 	= $('.notes textarea', this).val();
 			return list;
 		});
-
-
+		
 		$.ajax({
 				url: "https://api.mongolab.com/api/1/databases/geolocation/collections/boom?apiKey=f58E311FP8bY9rMS1NtzXCiVTXqC2V5O",
 				type: "POST",
