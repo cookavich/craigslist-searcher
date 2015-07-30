@@ -4,56 +4,72 @@
 	  	<title>stool.js</title>
 	  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	  	<script src="js/injection.js"></script>
+	  	<script src="js/bootstrap.min.js"></script>
 	   	<link href="css/bootstrap.css" rel="stylesheet">
 	   	<link href="css/my-styles.css" rel="stylesheet" media="screen">
 	   	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-	   	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/b6ba6fbfe9/UntitledProject/style.css">
+		<link rel="stylesheet" href="https://i.icomoon.io/public/temp/ea6d71fd74/UntitledProject/style.css">		
+		<script type="text/javascript">
+			$(function () {
+  				$('[data-toggle="tooltip"]').tooltip();
+			})
+		</script>
 	</head>
-
 
 	<body>
 
     <!--Navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-      	<span class="icon-hipster pull-right clearfix"></span>
+      	<span class="icon-cool pull-right clearfix"></span>
         <p class="navbar-header navbar-text pull-right hidden-xs">A Paul Cook Project</p>
-        <ul class="nav navbar-nav">
-        	<li class="actve"><a href="/">Results</a></li>
-        	<li><a href="http://localhost:8080/storage.html">Storage</a></li>
+        <ul class="nav nav-pills pull-left">
+        	<li role="presentation" class="active li-top"><a href="#">Results</a></li>
+        	<li role="presentation"><a href="http://localhost:8080/storage.html">Storage</a></li>
         </ul>
       </div>
     </div><!-- End navbar -->
 
 	<!-- Jumbotron -->
 	<div class="jumbotron">
-		<div class="row">
-			<div class="col-sm-6">
-				<h1>Stool.js</h1>
-				<h2>Find stools - Fast</h2>
-			</div>
-			<div class="col-sm-6">
-				
-			</div>
-		</div>
+		<h1 class="text-center">Clean Craigslist</h1>
+		<h3 class="text-center">a cleaner meaner way to browse.</h3>
 	</div>
 	<!-- End Jumbotron -->
 
     <!-- Main Content -->
 
-	<div class="container-fluid">
-	<h3>Here are your stools:</h3>
-	<div class="injection row" id="stage">
-		
+	<div class="container search-block">
+	  	<div class="row">
+		  	<div class="col-lg-6 col-lg-offset-3">
+		  		<div class="center-block">
+			  		<h2>Enter your search below<span class="glyphicon glyphicon-search hidden-md pull-right" aria-hidden="true"></span></h2>
+		  		</div>
+		  		<div class="input-group pull-left">
+			    	<span class="input-group-btn">
+				    	<input type="button" id="submit" class="btn btn-default" value="Go!">
+				    </span>
+			    	<input type="TEXT" id="user" class="form-control" placeholder="Search for..." data-toggle="tooltip" data-placement="right" title="Press return when finished">
+			    </div>
+			</div>
+		</div>
+	</div>
 
+	<div class="container-fluid ">
+		<div class="container injection row center-block" id="stage">
+			<span id="message"></span>
+		</div>
 	</div>		
 	
     <!-- End Main Content -->
 	
 	<!-- Footer  -->
 	<div>
-		<footer class="bg-primary">
-  			<p>paulrcook@me.com</p>
+		<footer class="footer bg-primary">
+  			<ul class="text-info">
+  				<li>Hey you, yeah you. You're looking good today!</li>
+  				<li><a href="mailto:#">paulrcook@me.com</a></li>
+  			</ul>
 		</footer>
 	</div>
  	<!-- End Footer -->

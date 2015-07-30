@@ -5,17 +5,17 @@
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/my-styles.css" rel="stylesheet" media="screen">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/injection.js"></script>
+  <script src="js/storage.js"></script>
 </head>
 <body>
-	<!--Navbar -->
+    <!--Navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-      	<span class="icon-hipster pull-right clearfix"></span>
+        <span class="icon-hipster pull-right clearfix"></span>
         <p class="navbar-header navbar-text pull-right hidden-xs">A Paul Cook Project</p>
-        <ul class="nav navbar-nav">
-        	<li><a href="http://localhost:8080/index.html">Results</a></li>
-        	<li class="actve"><a href="/">Storage</a></li>
+        <ul class="nav nav-pills pull-left">
+          <li role="presentation"><a href="http://localhost:8080">Results</a></li>
+          <li role="presentation" class="active"><a href="#">Storage</a></li>
         </ul>
       </div>
     </div><!-- End navbar -->
@@ -24,8 +24,7 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-6">
-        <h1>Stool.js</h1>
-          <h2>Longterm Storage</h2>
+        <h2>It all floats down here.</h2>
       </div>
       <div class="col-sm-6">
       </div>
@@ -37,5 +36,16 @@
   	<h1>Saved posts:</h1>
   	<div id="saved"></div>
   </div>
+
+  <!-- Footer  -->
+  <div>
+    <footer class="footer bg-primary">
+        <ul class="text-info">
+          <li>Hey you, yeah you. You're looking good today!</li>
+          <li><a href="mailto:#">paulrcook@me.com</a></li>
+        </ul>
+    </footer>
+  </div>
+  <!-- End Footer -->
 </body>
 </html>

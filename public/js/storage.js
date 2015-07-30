@@ -1,16 +1,23 @@
 // Handles the jQuery for storage.html
+$(document).ready(function() {
+	var storage = "./data.json";
 
-   $.ajax({
-	        type: "GET",
-	        url: "https://api.mongolab.com/api/1/databases/geolocation/collections/boom?apiKey=f58E311FP8bY9rMS1NtzXCiVTXqC2V5O",
-	        contentType: "application/json; charset=utf-8",
-	        dataType: "json",                        
-	        success: function (response) {
-
-	            console.log("success");
-	        },
-	        error: function (response){
-
-	            console.log("failed");
-	        }
+	$.getJSON(storage)
+	   	.done(function (data){
+	   		var stoolHTML = '';
+	   		$.each(data, function(i, item){
+				stoolHTML += '<div class="col-md-8 listing parent well">';
+				stoolHTML += '<ul>';
+	   		   	stoolHTML += '<li class="title"><h3>' + item.title + '</h3></li>';
+	   		   	stoolHTML += '<li class="price">Price: ' + item.price + '</li>';
+	   		   	stoolHTML += '<li class="link"><a href="' + item.link + '">Click for more info</a></li>';
+	   		   	stoolHTML += '<button type="button" class="btn btn-danger btn-lg delete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>   Delete</button></li>'
+	   			stoolHTML += '</ul>';
+	   			stoolHTML += '</div>';
+	   		});
+			$('#saved').html(stoolHTML);
 		});
+	$(document).on('click', '.delete', function() {
+		$(this).closest('div').remove();
+	});
+});

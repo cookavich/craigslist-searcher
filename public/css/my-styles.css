@@ -38,7 +38,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-hipster:before {
+.icon-cool:before {
     content: "\e600";
     font-size: 35px;
     margin-left: 10px;
@@ -50,8 +50,8 @@ ul {
 }
 
 .glyphicon-search {
-	font-size: 75px;
-	margin-top: 35px;
+	font-size: 25px;
+	padding-top: 7px; 
 }
 
 /* Jumbotron
@@ -64,16 +64,122 @@ ul {
 	margin-left: 30px;
 }
 
-/* Listing
-================================= */
-.Listing {
-	text-align: center;
+#results {
+	margin-bottom: 20px;
 }
 
+/* Search-Bar: ;
+================================= */
 
+.search-bar {
+	margin-bottom: 25px;
+}
 
+/* Listing
+================================= */
 
+.injection {
+	margin-top: 35px;
+	text-align: 
+}
 
+.listing {
+/*	text-align: center;
+*/}
 
+/*.center-block {
+	float: none;
+}
+*/
 
+/* Sticky footer styles
+================================= */
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+/* 3D Buttons
+================================= */
+
+.save,
+.delete {
+    margin: 4px;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.btn-danger {
+	color: #fff;
+	background-color: #db5566;
+	border-bottom: 2px solid #af4451;
+}
+
+.btn-danger:hover, .btn-danger:focus, .open>.dropdown-toggle.btn-danger {
+	color: #fff;
+	background-color: #df6a78;
+	border-bottom:2px solid #b25560;
+	outline: none;
+}
+
+.btn-danger:active, .btn-danger.active {
+	color: #fff;
+	background-color: #c04b59;
+	border-top:2px solid #9a3c47;
+	margin-top: 2px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: none;
+    outline-offset: 0px;
+}
+
+.btn-primary:focus {
+color: #fff;
+background-color: #df6a78;
+border-bottom:2px solid #b25560;
+outline: none;}
+
+.btn-primary.active:focus {
+color: #fff;
+background-color: #f5b75f;
+border-bottom:2px solid #c4924c;
+outline: none;
+}
+
+.btn-primary {
+color: #fff;
+background-color: 	;
+border-bottom:2px solid #098aa9;
+}
+
+.btn-primary:hover,.btn-primary.active:focus, .btn-primary:focus, .open>.dropdown-toggle.btn-primary {
+color: #fff;
+background-color: #29b6d8;
+border-bottom:2px solid #2192ad;
+outline: none;
+}
+
+.btn-primary:active, .btn-primary.active {
+color: #fff;
+background-color: #0a97b9;
+border-top:2px solid #087994;
+outline-offset: none;
+margin-top: 2px;
+}
