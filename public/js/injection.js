@@ -21,9 +21,9 @@ $(document).ready(function() {
 		   	.done(function (data){
 		   		var stoolHTML = '';
 		   		$.each(data.stools, function(i, item){
-					stoolHTML += '<div class="col-md-8 center-block clearfix listing parent well">';
-					stoolHTML += '<ul class="pull-left">';
-		   		   	stoolHTML += '<li class="title"><h3 class="clearfix">' + item.title + '</h3></li>';
+					stoolHTML += '<div class="col-md-8 center-block listing parent well">';
+					stoolHTML += '<ul>';
+		   		   	stoolHTML += '<li class="title"><h3>' + item.title + '</h3></li>';
 		   		   	stoolHTML += '<li class="price">Price: ' + item.price + '</li>';
 		   		   	stoolHTML += '<li class="link"><a href="' + item.link + '">Click for more info</a></li>';
 		   		   	stoolHTML += '<textarea class="form-control" rows="3" placeholder="Listing notes" class="notes"></textarea>'
