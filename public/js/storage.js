@@ -1,7 +1,8 @@
 // Handles the jQuery for storage.html
 $(document).ready(function() {
 	var storage = "./data.json";
-
+	// Grabs the JSON info of the saved listings, and then recreates
+	// the saved listings similar to injection.js
 	$.getJSON(storage)
 	   	.done(function (data){
 	   		var stoolHTML = '';
@@ -18,6 +19,8 @@ $(document).ready(function() {
 	   		});
 			$('#saved').html(stoolHTML);
 		});
+
+	// Deletes the saved listing
 	$(document).on('click', '.delete', function() {
 		$(this).closest('div').remove();
 	});
